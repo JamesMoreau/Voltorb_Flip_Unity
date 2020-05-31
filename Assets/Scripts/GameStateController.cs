@@ -59,8 +59,6 @@ public class GameStateController : MonoBehaviour
         }
 
         PlayButton.interactable = true;
-
-        //clear the indicators as well...
     }
 
     //TODO: change difficulty by passing a var to setupBoard()
@@ -77,15 +75,6 @@ public class GameStateController : MonoBehaviour
         }
 
         IndicatorsControl.UpdateValues();
-
-        //fill in indicators with corresponding data
-        /*for (int i = 0; i < board_length; i++) { //should be based on random value generated
-            horizontal_indicators[i] = 0;
-        }*/
-
-        /*for (int i = 0; i < board_length; i++) {
-            vertical_indicators[i] = 0;
-        }*/
 
         moveCount = 0;
         currentCoins = 0;

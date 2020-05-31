@@ -12,7 +12,6 @@ public class TileController : MonoBehaviour
     public int row;
 
     public void updateTile() {
-        /*int[] coords = { column, row };*/
         interactiveButton.image.sprite = gameController.getTileSprite(column, row);
         gameController.moveCount++;
     }

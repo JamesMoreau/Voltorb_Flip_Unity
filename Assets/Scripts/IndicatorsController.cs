@@ -28,13 +28,6 @@ public class IndicatorsController : MonoBehaviour {
     }
 
     void Update() {
-        /*digitsTilemap.SetTile(horizontalTilePositions[0], digitTiles[horizontalValues[0].value_second_digit]);
-        digitsTilemap.SetTile(horizontalTilePositions[0] + new Vector3Int(-8, 0, 0), digitTiles[horizontalValues[0].value_first_digit]);
-        digitsTilemap.SetTile(horizontalTilePositions[0] + new Vector3Int(0, -13, 0), digitTiles[horizontalValues[0].voltorb_count]);*/
-
-        /*digitsTilemap.SetTile(horizontalTilePositions[1], digitTiles[horizontalValues[1].value_second_digit]);
-        digitsTilemap.SetTile(horizontalTilePositions[1] + new Vector3Int(-8, 0, 0), digitTiles[horizontalValues[1].value_first_digit]);
-        digitsTilemap.SetTile(horizontalTilePositions[1] + new Vector3Int(0, -13, 0), digitTiles[horizontalValues[1].voltorb_count]);*/
 
         for (int i = 0; i < INDICATOR_LENGTH; i++) {
             //setting horizontal tiles
@@ -46,10 +39,6 @@ public class IndicatorsController : MonoBehaviour {
             digitsTilemap.SetTile(verticalTilePositions[i], digitTiles[verticalValues[i].value_second_digit]);
             digitsTilemap.SetTile(verticalTilePositions[i] + new Vector3Int(-8, 0, 0), digitTiles[verticalValues[i].value_first_digit]);
             digitsTilemap.SetTile(verticalTilePositions[i] + new Vector3Int(0, -13, 0), digitTiles[verticalValues[i].voltorb_count]);
-
-            /*digitsTilemap.SetTile(verticalTilePositions[i], digitTiles[verticalValues[i][0]]);
-            digitsTilemap.SetTile(verticalTilePositions[i] + new Vector3Int(8, 0, 0), digitTiles[verticalValues[i][1]]);
-            digitsTilemap.SetTile(verticalTilePositions[i] + new Vector3Int(8, -13, 0), digitTiles[verticalValues[i][2]]);*/
         }
     }
 
