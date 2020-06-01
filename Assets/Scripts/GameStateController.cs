@@ -3,10 +3,11 @@ using UnityEngine.UI;
 
 public class GameStateController : MonoBehaviour
 {
-    [Header("Tile references")]
+    [Header("Game references")]
     public GridLayoutGroup TileGridContainer;
     public TileController[] Tiles;
     public Button PlayButton;
+    public Text GameOverText;
 
     [Header("Indicators references")]
     public IndicatorsController IndicatorsControl;
@@ -35,6 +36,7 @@ public class GameStateController : MonoBehaviour
         int valueOfTile = board[row, column];
 
         if (valueOfTile == 0) {
+            game_over();
             return tile_0;
         } else if (valueOfTile == 1) {
             return tile_1;
@@ -59,6 +61,7 @@ public class GameStateController : MonoBehaviour
         }
 
         PlayButton.interactable = true;
+        GameOverText.gameObject.SetActive(false);
     }
 
     //TODO: change difficulty by passing a var to setupBoard()
@@ -79,6 +82,11 @@ public class GameStateController : MonoBehaviour
         moveCount = 0;
         currentCoins = 0;
 
+        GameOverText.gameObject.SetActive(false);
         //PlayButton.interactable = false;
+    }
+
+    public void game_over() {
+        GameOverText.gameObject.SetActive(true);
     }
 }
